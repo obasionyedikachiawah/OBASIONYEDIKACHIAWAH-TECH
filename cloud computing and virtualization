@@ -1,0 +1,100 @@
+ MY LEARNING JOURNEY: FROM NETWORK ADDRESSING TO CLOUD COMPUTING AND VIRTUALIZATION
+
+As I continue building my knowledge in IT, networking, and cybersecurity, I’ve been exploring some important concepts that form the foundation of modern computing. Here are my key takeaways! 👇
+
+🔹 1. Physical Address vs. Logical Address
+
+Have you ever wondered how devices communicate within a network and across different networks?
+
+ Physical Address (MAC Address):
+
+- Assigned to a network interface.
+- Operates at Layer 2 of the OSI model.
+- Used to deliver frames within a local network.
+- Example: "00:1A:2B:3C:4D:5E"
+
+ Logical Address (IP Address):
+
+- Used to identify devices logically on a network.
+- Operates at Layer 3 of the OSI model.
+- Helps routers forward packets between different networks.
+- Example: "192.168.1.10"
+
+Key takeaway: MAC addresses help with local frame delivery, while IP addresses support communication across networks.
+
+🔹 2. Categories of Cloud Computing Services
+
+Cloud computing allows users and organizations to access computing resources over the internet without managing all the underlying physical infrastructure.
+
+ IaaS – Infrastructure as a Service
+Provides virtual machines, storage, and networking resources.
+
+Examples: Amazon EC2, Microsoft Azure Virtual Machines.
+
+ PaaS – Platform as a Service
+Provides an environment for developing, testing, and deploying applications.
+
+Examples: Google App Engine, Azure App Service.
+
+ SaaS – Software as a Service
+Provides ready-to-use applications over the internet.
+
+Examples: Gmail, Microsoft 365, Salesforce.
+
+Key takeaway: IaaS provides infrastructure, PaaS provides a development platform, and SaaS provides software applications.
+
+🔹 3. Virtualization and Hypervisors
+
+Virtualization allows one physical computer to run multiple virtual machines (VMs), each capable of running its own operating system.
+
+The technology that makes this possible is called a hypervisor.
+
+There are two major types:
+
+ Type 1 Hypervisor – Bare-Metal
+Runs directly on the physical hardware.
+
+Examples:
+
+- VMware ESXi
+- Microsoft Hyper-V
+- Xen
+
+Commonly used in enterprise data centers because of their performance and resource management capabilities.
+
+ Type 2 Hypervisor – Hosted
+Runs as an application on an existing operating system.
+
+Examples:
+
+- Oracle VirtualBox
+- VMware Workstation
+- VMware Fusion
+
+Useful for learning, software testing, and building cybersecurity labs on personal computers.
+
+Key takeaway: Type 1 runs directly on hardware, while Type 2 runs on a host operating system.
+
+. Types of Cloud Deployment
+
+Clouds can also be classified according to how their infrastructure is owned, managed, and accessed.
+
+ Public Cloud: Services delivered over shared cloud infrastructure by providers such as AWS, Microsoft Azure, and Google Cloud.
+
+ Private Cloud: Cloud infrastructure dedicated to a single organization.
+
+ Hybrid Cloud: Combines private and public cloud environments.
+
+ Community Cloud: Infrastructure shared by organizations with common requirements, such as security or regulatory needs.
+
+Key takeaway: Organizations choose their cloud deployment model based on cost, security, control, compliance, and scalability.
+
+ Why does this matter in cybersecurity?
+
+Understanding these concepts helps us build stronger networks, configure virtual labs, understand cloud infrastructure, and make better security decisions.
+
+Every concept learned is another step toward becoming a more competent IT and cybersecurity professional. The journey continues! 
+
+💬 Let's discuss:
+Which of these concepts do you find most interesting: network addressing, cloud services, virtualization, or cloud deployment models?
+
