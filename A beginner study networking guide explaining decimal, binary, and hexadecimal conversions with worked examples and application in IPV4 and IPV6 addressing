@@ -1,0 +1,331 @@
+ Number System Conversions in Computer Networking: Decimal, Binary, and Hexadecimal
+
+ Project Overview
+
+As part of my networking learning journey, I have successfully studied and practised number system conversions, focusing on how decimal, binary, and hexadecimal numbering systems are used in IP addressing.
+
+Understanding these conversions is essential for network engineers and cybersecurity professionals because computers process information in binary, IPv4 addresses are commonly represented in decimal, and IPv6 addresses use hexadecimal notation.
+
+This documentation explains the conversion methods, step-by-step examples, and their practical applications in IPv4 and IPv6 networking.
+
+ Learning Objectives
+
+- Understand decimal, binary, and hexadecimal numbering systems.
+- Convert decimal numbers to binary.
+- Convert decimal numbers to hexadecimal.
+- Convert hexadecimal numbers to decimal.
+- Understand how binary and hexadecimal relate to IPv4 and IPv6 addresses.
+- Apply these conversions to basic networking tasks and troubleshooting.
+
+1. Understanding the Numbering Systems
+
+A. Decimal Number System (Base 10)
+
+The decimal system uses ten digits, from 0 to 9. It is the numbering system we use in everyday life and the standard notation for IPv4 addresses.
+
+Example: "192.168.1.10"
+
+Each IPv4 address contains four decimal octets separated by periods.
+
+B. Binary Number System (Base 2)
+
+The binary system uses only two digits: "0" and "1". Computers use binary to represent and process digital information.
+
+Each binary digit is called a bit.
+
+An IPv4 address consists of 32 bits, divided into four groups of 8 bits called octets.
+
+Example:
+
+"192.168.1.10"
+
+Its binary representation is:
+
+"11000000.10101000.00000001.00001010"
+
+C. Hexadecimal Number System (Base 16)
+
+The hexadecimal system uses 16 symbols:
+
+"0, 1, 2, 3, 4, 5, 6, 7, 8, 9, A, B, C, D, E, F"
+
+The letters represent these decimal values:
+
+Hexadecimal| Decimal
+A| 10
+B| 11
+C| 12
+D| 13
+E| 14
+F| 15
+
+Hexadecimal is particularly useful in IPv6 addressing because it provides a shorter, more readable representation of a 128-bit address.
+
+2. Converting Decimal to Binary
+
+To convert a decimal number to binary, repeatedly divide the number by 2 and record each remainder.
+
+Step-by-step method
+
+1. Divide the decimal number by 2.
+2. Record the remainder, either 0 or 1.
+3. Divide the quotient by 2 again.
+4. Repeat until the quotient becomes 0.
+5. Read the remainders from bottom to top.
+
+Worked example: Convert 206 to binary
+
+Division| Quotient| Remainder
+206 ÷ 2| 103| 0
+103 ÷ 2| 51| 1
+51 ÷ 2| 25| 1
+25 ÷ 2| 12| 1
+12 ÷ 2| 6| 0
+6 ÷ 2| 3| 0
+3 ÷ 2| 1| 1
+1 ÷ 2| 0| 1
+
+Reading the remainders from bottom to top gives:
+
+206₁₀ = 11001110₂
+
+Verification using powers of 2
+
+Binary place values are powers of 2:
+
+Bit| 1| 1| 0| 0| 1| 1| 1| 0
+Place value| 128| 64| 32| 16| 8| 4| 2| 1
+
+Add the place values corresponding to bits equal to 1:
+
+128 + 64 + 8 + 4 + 2 = 206.
+
+Therefore, the conversion is correct.
+
+Networking application: IPv4
+
+Consider the IPv4 address:
+
+"192.168.1.10"
+
+Convert each octet separately:
+
+Decimal octet| Binary equivalent
+192| 11000000
+168| 10101000
+1| 00000001
+10| 00001010
+
+The complete binary IPv4 address is:
+
+"11000000.10101000.00000001.00001010"
+
+Key lesson: Every IPv4 octet must be represented using exactly 8 bits when writing the complete binary address. Leading zeros may be necessary.
+
+3. Converting Decimal to Hexadecimal
+
+To convert a decimal number to hexadecimal, repeatedly divide by 16 and record the remainders.
+
+Step-by-step method
+
+1. Divide the decimal number by 16.
+2. Record the remainder.
+3. Convert remainders from 10 to 15 into A to F.
+4. Continue dividing the quotient by 16 until it becomes 0.
+5. Read the remainders from bottom to top.
+
+Worked example: Convert 206 to hexadecimal
+
+206 ÷ 16 = 12 remainder 14.
+
+- The quotient 12 corresponds toy hexadecimal "C".
+- The remainder 14 corresponds to hexadecimal "E".
+
+Therefore:
+
+206₁₀ = CE₁₆
+
+Verification
+
+The hexadecimal number "CE" can be expanded using powers of 16:
+
+CE₁₆ = (C × 16¹) + (E × 16⁰)
+
+CE₁₆ = (12 × 16) + (14 × 1)
+
+CE₁₆ = 192 + 14 = 206.
+
+The conversion is correct.
+
+4. Converting Hexadecimal to Decimal
+
+To convert hexadecimal to decimal, multiply each digit by its corresponding power of 16, starting from the right with power zero.
+
+Worked example: Convert CE₁₆ to decimal
+
+Hex digit| Decimal value| Place value| Calculation
+C| 12| 16¹| 12 × 16 = 192
+E| 14| 16⁰| 14 × 1 = 14
+
+Add the results:
+
+192 + 14 = 206.
+
+Therefore:
+
+CE₁₆ = 206₁₀
+
+Another example: Convert 2F₁₆ to decimal
+
+- "2" occupies the 16¹ position.
+- "F" represents decimal 15 and occupies the 16⁰ position.
+
+Calculation:
+
+(2 × 16) + (15 × 1) = 32 + 15 = 47.
+
+Therefore:
+
+2F₁₆ = 47₁₀
+
+5. Understanding These Conversions in IPv4
+
+IPv4 uses a 32-bit address divided into four 8-bit octets.
+
+Example:
+
+"192.168.1.10"
+
+Each octet can represent a decimal value from 0 to 255 because eight binary bits provide 256 possible combinations.
+
+For example:
+
+"11111111₂ = 255₁₀"
+
+This is because:
+
+128 + 64 + 32 + 16 + 8 + 4 + 2 + 1 = 255.
+
+Understanding decimal-to-binary conversion is useful when learning:
+
+- Subnet masks and CIDR notation.
+- Network and broadcast addresses.
+- Host address ranges.
+- IP addressing and subnet calculations.
+- Network access control and troubleshooting.
+
+For example, the subnet mask "255.255.255.0" corresponds to:
+
+"11111111.11111111.11111111.00000000"
+
+This represents 24 consecutive network bits, commonly written as "/24".
+
+6. Understanding These Conversions in IPv6
+
+IPv6 uses 128-bit addresses represented in hexadecimal notation.
+
+An IPv6 address contains eight groups of 16 bits, with each group written as up to four hexadecimal digits.
+
+Example:
+
+"2001:0db8:0000:0000:0000:ff00:0042:8329"
+
+Each hexadecimal digit corresponds to four binary bits.
+
+For example:
+
+Hexadecimal| Binary
+0| 0000
+1| 0001
+8| 1000
+A| 1010
+C| 1100
+F| 1111
+
+Consider the IPv6 group "00C8".
+Convert each hexadecimal digit into four binary bits:
+
+- "0" = "0000"
+- "0" = "0000"
+- "C" = "1100"
+- "8" = "1000"
+
+The result is:
+
+"00C8₁₆ = 0000000011001000₂"
+
+Its decimal value is:
+
+(0 × 16³) + (0 × 16²) + (12 × 16¹) + (8 × 16⁰)
+
+= 0 + 0 + 192 + 8
+
+= 200.
+
+Therefore:
+
+00C8₁₆ = 200₁₀
+
+In IPv6, the address is normally written in hexadecimal rather than converting each entire group to decimal. Binary and decimal conversions are nevertheless useful for understanding the underlying values.
+
+IPv6 abbreviation
+
+IPv6 allows certain leading zeros in a group to be omitted.
+
+For example:
+
+"2001:0db8:0000:0000:0000:ff00:0042:8329"
+
+can be shortened to:
+
+"2001:db8::ff00:42:8329"
+
+The double colon replaces one consecutive sequence of zero-valued groups. It can be used only once in an address to ensure that the original eight groups can be reconstructed unambiguously.
+
+7. Quick Reference: Conversion Methods
+
+Conversion| Method
+Decimal → Binary| Repeated division by 2; read remainders in reverse
+Decimal → Hexadecimal| Repeated division by 16; read remainders in reverse
+Hexadecimal → Decimal| Multiply each digit by powers of 16 and add
+Hexadecimal → Binary| Replace each hexadecimal digit with four binary bits
+Binary → Decimal| Add the place values of bits equal to 1
+
+8. Practice Exercises
+
+Try solving these exercises before checking your answers.
+
+1. Convert decimal "150" to binary.
+2. Convert decimal "255" to hexadecimal.
+3. Convert hexadecimal "A5" to decimal.
+4. Convert hexadecimal "7B" to decimal.
+5. Convert the IPv4 octet "172" to binary.
+6. Convert the IPv6 group "00FF" to binary and decimal.
+
+Answers
+
+1. "150₁₀ = 10010110₂"
+2. "255₁₀ = FF₁₆"
+3. "A5₁₆ = 165₁₀"
+4. "7B₁₆ = 123₁₀"
+5. "172₁₀ = 10101100₂"
+6. "00FF₁₆ = 0000000011111111₂ = 255₁₀"
+
+9. Key Takeaways
+
+- Binary is the fundamental numbering system used by digital computers.
+- Decimal-to-binary conversion helps explain IPv4 addresses and subnet masks.
+- Hexadecimal provides a compact way to represent binary values.
+- Hexadecimal-to-decimal conversion helps interpret numerical values in network addressing.
+- IPv4 uses 32-bit addresses, while IPv6 uses 128-bit addresses.
+- Understanding these conversions provides a foundation for subnetting, network configuration, troubleshooting, and cybersecurity.
+
+ Conclusion
+
+Completing this topic has strengthened my understanding of the mathematical principles behind IP addressing. I am continuing to develop my networking knowledge through consistent study, practical exercises, and hands-on learning.
+
+This repository documents my progress and serves as a reference for anyone beginning their journey into computer networking.
+
+Learning by understanding. Improving through practice. Building toward a career in Networking and Cybersecurity. 
+
+#Networking #Cybersecurity #IPv4 #IPv6 #Binary #Hexadecimal #IPAddresses #NetworkEngineering
